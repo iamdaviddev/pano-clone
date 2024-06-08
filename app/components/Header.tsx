@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Header(){
   return(
-    <header className="bg-[#F3EEE3]">
+    <header className="bg-[#F3EEE3] fixed top-0 left-0 w-full z-10 backdrop-blur-lg bg-opacity-30">
       <div className="flex items-center justify-between  p-8 max-w-[1200px] m-auto">
         <Image src={logoImg} alt="pano logo image"/>
         <nav className="flex items-center gap-10 text-lg">
