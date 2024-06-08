@@ -1,13 +1,12 @@
 import Image from "next/image";
 import customers from '/public/customers.svg'
-import integration from '/public/integration.svg'
 import { Zap } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="bg-[#F3EEE3] ">
+    <main className="bg-[#F3EEE3] space-y-10">
       <section className="flex flex-col items-center h-[400px]">
-        <h1 className="text-6xl text-center font-extrabold mt-44">
+        <h1 className="text-6xl text-center font-extrabold mt-56">
           Let’s find the customers who <br />
           need your <span className="text-[#04DA00]">attention</span>
         </h1>
@@ -17,10 +16,10 @@ export default function Home() {
         </p>
       </section>
       <section className="bg-[url('/hero-img.svg')] w-full h-[1799.06px] flex flex-col items-center">
-        <button className="bg-black text-white text-center font-semibold w-[250px] h-[68px] rounded-full hover:bg-[#04DA00] transition-all duration-300 mb-20">
+        <button className="bg-black text-white text-center font-semibold w-[250px] h-[68px] rounded-full hover:bg-[#04DA00] transition-all duration-300 mt-24 mb-20">
           Get started free
         </button>
-        <div className="">
+        <div className="mb-20">
           <Image src={customers} alt="customers image" className="rounded-2xl border-8 border-[#04DA00] shadow-md shadow-[#04DA00]"/>
         </div>
         <div className="max-w-[1200px] p-8 m-auto bg-[url('/integration.svg')] flex items-center h-[780px] gap-4 rounded-[80px]">

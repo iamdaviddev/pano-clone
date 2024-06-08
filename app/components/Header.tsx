@@ -1,6 +1,17 @@
 import Image from "next/image";
-import logoImg from '/public/logo.svg'
 import Link from "next/link";
+import logoImg from '/public/logo.svg';
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react";
+
 
 export function Header(){
   return(
@@ -9,7 +20,18 @@ export function Header(){
         <Image src={logoImg} alt="pano logo image"/>
         <nav className="flex items-center gap-10 text-lg">
           <Link href="/team" className="text-lg font-medium hover:text-[#04DA00] duration-200">
-            Teams
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex gap-2 outline-none">
+                Teams
+                <ChevronDown/>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-44">
+                <DropdownMenuItem className="">
+                  Team
+                </DropdownMenuItem>
+                <DropdownMenuItem>Subscription</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </Link>
           <Link href="/integration" className="text-lg font-medium hover:text-[#04DA00] duration-200">Integrations</Link>
           <Link href="/pricing" className="text-lg font-medium hover:text-[#04DA00] duration-200">Pricing</Link>
